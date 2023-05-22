@@ -1,4 +1,4 @@
-# Stereolithography (SLA) PCB manufacturing
+# Masked Stereolithography (MSLA) PCB manufacturing
 
 This is a simple guide (and a reference for me in the future) to make simple PCBs at home. Other than the actual materials used for the synthesis, only a resin printer is required.
 
