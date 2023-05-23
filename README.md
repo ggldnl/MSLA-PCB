@@ -62,7 +62,7 @@ Place the board inside the solution and start to gently agitation it. Unexposed 
 <TODO>
 <Add picture>
 
-# Etch it 
+# Etching
 
 The plate is then completely submerged in a solution that eats away at the exposed metal. Ferric chloride may be used for etching copper plates as well as zinc plates. Typical solutions are 1 part FeCl3 to 1 part water. The strength of the acid determines the speed of the etching process. The temperature also affects the process.
 
