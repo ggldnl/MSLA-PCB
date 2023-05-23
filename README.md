@@ -2,6 +2,12 @@
 
 This is a simple guide (and a reference for me in the future) to make simple PCBs at home. Other than the actual materials used for the synthesis, only a resin printer is required.
 
+Materials:
+- Photosensitive (dry) film
+- Sodium carbonate
+- Ferric chloride
+- Acetone
+
 # Stereolithography
 
 Stereolithography (SLA) is an additive manufacturing process commonly used in 3D printing. It is a technique that creates three-dimensional objects by selectively curing layers of liquid photopolymer resin using focused UV light.
@@ -21,7 +27,7 @@ Instead of curing resin, we will use the same physical principle to cure a photo
 
 # Convert the PCB to a printable file
 
-Most EDAs let you directly export the 3D model of the PCB but sometimes this feature is either paid or not implemented at all (easyEDA at the time I'm writing this). A 3D model of the traces is required for the procedure. For this reason I wrote a simple script that lets you convert a black and white image (or a pdf) to an STL file by extruding the black pixels.
+A 3D model of the traces is required for the procedure. Most EDAs let you directly export the 3D model of the PCB but sometimes this feature is either paid or not implemented at all (easyEDA at the time I'm writing this) and most converters simply does not work. For this reason I wrote a simple script that lets you convert a black and white image (or a pdf) to an STL file by extruding the black pixels.
 
 Mirror the STL vertically otherwise the resulting PCB will be upside down and you will not be able to solder the components on it. 
 
@@ -31,7 +37,10 @@ The first thing to do is clean the copper clad. I usually rub the board with fin
 
 The cutting and sanding contaminates the board with dust and fine bits of copper, the handling of the boards deposits oil from your fingers. Before continuing I usually wipe the surface with alcohol.
 
-Apply the photosensitive film and then heat the board to make the film adhere to the copper: you can apply it by hand and then use an iron (not directly in contact with the film, for example you can use greaseproof paper; be careful not to over heat it or the film will simply melt) or use a laminating machine. I's crucial that the surface has no bubbles, otherwise those areas will not correctly adhere on the copper nor develop and the traces underneath them will be ruined.
+Peel off the first side of the photosensitive film and apply it on the copper clad. Heat the board to make the film adhere to the copper: you can apply it by hand and then use an iron (not directly in contact with the film, for example you can use greaseproof paper; be careful not to over heat it or the film will simply melt) or use a laminating machine. I's crucial that the surface has no bubbles, otherwise those areas will not correctly adhere on the copper nor develop and the traces underneath them will be ruined.
+
+<TODO>
+<Add picture>
 
 # Expose the copper clad
 
@@ -39,20 +48,36 @@ Send the 3D file to your slicer and adjust the exposure of the first layer to 25
 Exposing the copper clad for too long will cause the film to develop over a larger area and the result will be too inaccurate.
 Exposing the board for too little will cause it not to develop enough.
 
-Place the copper clad in the middle of the LCD screen of the MSLA printer and run start the print process. The masked UV rays will develop the photosensitive film in some areas leaving others protected. The developed photosensitive film will prevent the etching agent to etch the area underneath.
+Place the copper clad in the middle of the LCD screen of the MSLA printer and run start the print process. The masked UV rays will cure the photosensitive film in some areas leaving others protected. The exposed photosensitive film will later prevent the etching agent to etch the area underneath. You will know that you've exposed it right when the lines reflect on the photoexposed PCB.
+
+<TODO>
+<Add picture>
+
+# Photodeveloping
+
+Before developing, peel the remaining protective film. 
+Prepare the solution to develop the film. I use a 1% (wt.) solution of sodium carbonate (common soda ash) <TODO check>. 
+Place the board inside the solution and start to gently agitation it. Unexposed film starts coming off and with some scrubing the process is usually complete in about 10 minutes. If you want, after the unexposed film has come off, expose again for a few minutes if the traces aren't nice and dark.
+
+<TODO>
+<Add picture>
 
 # Etch it 
 
-The plate is then completely submerged in a solution that eats away at the exposed metal. Ferric chloride may be used for etching copper plates as well as zinc plates.
-Typical solutions are 1 part FeCl3 to 1 part water. The strength of the acid determines the speed of the etching process.
+The plate is then completely submerged in a solution that eats away at the exposed metal. Ferric chloride may be used for etching copper plates as well as zinc plates. Typical solutions are 1 part FeCl3 to 1 part water. The strength of the acid determines the speed of the etching process. The temperature also affects the process.
 
 Shake the tray containing the ferric chloride and the board until only the areas covered by the developed photosensitive film are left.
 
+<TODO>
+<Add picture>
+
 # Postprocessing
 
-<TODO>
-<Place the board in another tray containing>
+When the exposed metal has been completely corroded by the ferric chloride, we can remove the board from the tray and rinse under water. To remove the residual ink from the film we can submerge the board in acetone and use a toothbrush to gently brush the traces. Clean again under water when you are done with the acetone.
 
 Check all the traces with a multimeter and score the board with the currer to remove unwanted connections. Done.
 
 This procedure is very simple and lets you prototype fast with new designs without the hassle of waiting for a professionally made pcb to be manufactured and shipped.
+
+<TODO>
+<Add picture>
