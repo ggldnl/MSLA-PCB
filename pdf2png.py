@@ -61,7 +61,7 @@ if __name__ == '__main__':
     input_path = PurePath(args.filename)
 
     # TODO check
-    output_path = PurePath(args.output_path)
+    output_path = PurePath(args.output)
     if output_path is None:
         output_path = PurePath(input_path.parent, input_path.stem + '.png')
 
