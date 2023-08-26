@@ -76,7 +76,6 @@ def preprocess (image, extrude_black=True, hmirror=False, vmirror=True, threshol
     # so we set it to True and the black area is set to False; 
     # if extrude_black is True we need to invert the image
     if extrude_black:
-        print("Inverting the image")
         image = ~image
 
     # import matplotlib.pyplot as plt
