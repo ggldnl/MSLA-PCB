@@ -215,7 +215,7 @@ if __name__ == '__main__':
 
     # we have the image as a numpy array, remove external padding
     # and apply other preprocessing steps
-    img = preprocess(img, invert=False)
+    img = preprocess(img)
 
     # convert the image to 
     obj_3d = numpy_to_stl(img, size) # (width, depth, height)
