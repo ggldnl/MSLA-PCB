@@ -62,7 +62,7 @@ def preprocess (image, invert=False, hmirror=False, vmirror=True, threshold=255/
 
     # grayscale the image
     if len(image.shape) == 3:
-        image = np.mean(image, axis=2, dtype=bool)
+        image = np.mean(image, axis=2, dtype=int)
 
     # threshold the image so that we end up with only two colors, black and white
     image[image >= threshold] = 255
