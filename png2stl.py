@@ -186,8 +186,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
+    # sample command: python png2stl.py path/to/png.png width(mm) height(mm) depth(mm)
     parser.add_argument('filename') # e.g. ./samples/load_sharing_panelized.png
-    parser.add_argument('size', nargs='+', type=int) # e.g. -s 18 25 1
+    parser.add_argument('size', nargs='+', type=int) # e.g. 18 25 1
 
     args = parser.parse_args()
 
