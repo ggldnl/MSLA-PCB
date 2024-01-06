@@ -57,7 +57,7 @@ Place the copper clad in the middle of the LCD screen of the MSLA printer and ru
 
 Before developing, peel the remaining protective film. 
 Prepare the solution to develop the film. I use a 1% (wt.) solution of sodium carbonate (common soda ash) <TODO check>. 
-Place the board inside the solution and start to gently agitation it. Unexposed film starts coming off and with some scrubing the process is usually complete in about 10 minutes. If you want, after the unexposed film has come off, expose again for a few minutes if the traces aren't nice and dark.
+Place the board inside the solution and start to gently agitate it. Unexposed film starts coming off and with some scrubing the process is usually complete in about 10 minutes. If you want, after the unexposed film has come off, expose again for a few minutes if the traces aren't nice and dark.
 
 <TODO>
 <Add picture>
