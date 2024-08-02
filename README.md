@@ -8,7 +8,7 @@ Materials:
 - Ferric chloride
 - Acetone
 
-# Stereolithography
+## Stereolithography
 
 Stereolithography (SLA) is an additive manufacturing process commonly used in 3D printing. It is a technique that creates three-dimensional objects by selectively curing layers of liquid photopolymer resin using focused UV light.
 
@@ -25,13 +25,13 @@ Stereolithography is a broad term that encompasses various technologies. Some co
 MSLA technology has gained popularity due to its cost-effectiveness. We will use a standard MSLA printer. My MSLA printer is an Anycubic Photon Mono.
 Instead of curing resin, we will use the same physical principle to cure a photosensitive film applied over a copper clad, in order to produce a mask that prevent an etching solution to affect certain areas of the board.
 
-# Convert the PCB to a printable file
+## Convert the PCB to a printable file
 
 A 3D model of the traces is required for the procedure. Most EDAs let you directly export the 3D model of the PCB but sometimes this feature is either paid or not implemented at all (easyEDA at the time I'm writing this) and most converters simply does not work. For this reason I wrote a simple script that lets you convert a black and white image (or a pdf) to an STL file by extruding the black pixels.
 
 Mirror the STL vertically otherwise the resulting PCB will be upside down and you will not be able to solder the components on it. 
 
-# Copper clad preparation
+## Copper clad preparation
 
 The first thing to do is clean the copper clad. I usually rub the board with fine grain sanding paper (320-400 grit) to even the surface and remove the stains; do not overdo it because the copper film is thin and could wear out too much, making the traces too thin and brittle; a few strokes with steel wool might help but it is not essential. After the board is clean cut it to proper size. Mark the dimensions and score the surface about 20/30 times with the blunt edge of the cutter on both sides; 
 
@@ -42,7 +42,7 @@ Peel off the first side of the photosensitive film and apply it on the copper cl
 <TODO>
 <Add picture>
 
-# Expose the copper clad
+## Expose the copper clad
 
 Send the 3D file to your slicer and adjust the exposure of the first layer to 25 seconds and the exposure for the other layers to 0. I found that this works pretty well for me, fine tune the first layer exposure time to suit your needs. These values may vary based on the printer, the photosensitive film and numerous other factors.
 Exposing the copper clad for too long will cause the film to develop over a larger area and the result will be too inaccurate.
@@ -53,7 +53,7 @@ Place the copper clad in the middle of the LCD screen of the MSLA printer and ru
 <TODO>
 <Add picture>
 
-# Photodeveloping
+## Photodeveloping
 
 Before developing, peel the remaining protective film. 
 Prepare the solution to develop the film. I use a 1% (wt.) solution of sodium carbonate (common soda ash) <TODO check>. 
@@ -62,7 +62,7 @@ Place the board inside the solution and start to gently agitate it. Unexposed fi
 <TODO>
 <Add picture>
 
-# Etching
+## Etching
 
 The plate is then completely submerged in a solution that eats away at the exposed metal. Ferric chloride may be used for etching copper plates as well as zinc plates. Typical solutions are 1 part FeCl3 to 1 part water. The strength of the acid determines the speed of the etching process. The temperature also affects the process.
 
@@ -71,7 +71,7 @@ Shake the tray containing the ferric chloride and the board until only the areas
 <TODO>
 <Add picture>
 
-# Postprocessing
+## Postprocessing
 
 When the exposed metal has been completely corroded by the ferric chloride, we can remove the board from the tray and rinse under water. To remove the residual ink from the film we can submerge the board in acetone and use a toothbrush to gently brush the traces. Clean again under water when you are done with the acetone.
 
